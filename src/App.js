@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import photo from "./image/moto2.jpg";
+import "./style.css"
+import "./App.css";
+import ReactPlayer from "react-player";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ border: "solid 10 black", maxWidth: "100vw" }}>
+        <h1 className="title red">Mehdi Barwaki</h1>
+        <img src="/image/moto.jpg" alt="photo mehdi moto" />
+        
+        <img src={photo} alt="photo moto 2" />
+      </div>
+      <ReactPlayer
+        controls
+        width="320"
+        height="240"
+        url="https://youtu.be/qzrqo7W4XYY"
+      />
+
+      
     </div>
   );
 }
